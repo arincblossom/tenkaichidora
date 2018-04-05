@@ -1,0 +1,15 @@
+<html>
+<head>
+<script src="js/sha.js"></script>
+	<script>
+		function shaEncrypt(data) {
+			var shaObj = new jsSHA("SHA-256", "TEXT");
+		    shaObj.update(data);
+		    return shaObj.getHash("HEX");
+		}
+		</script>
+</head>
+<body>
+<script>document.write(shaEncrypt("melspasswd"));</script>
+</body>
+</html>
